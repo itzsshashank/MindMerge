@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mind Merge</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Mind Merge</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
+    </nav>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Mind Merge</h1>
+      <p>Your Gateway to Innovation in Software, AI, and ML</p>
+      <div class="example-boxes">
+        <div class="example-box">
+          <h3>Software Solutions</h3>
+          <p>Explore our cutting-edge software solutions.</p>
+        </div>
+        <div class="example-box">
+          <h3>AI Applications</h3>
+          <p>Experience the power of artificial intelligence.</p>
+        </div>
+        <div class="example-box">
+          <h3>Machine Learning</h3>
+          <p>Unleash the potential of machine learning technologies.</p>
+        </div>
+      </div>
+      <a href="#" class="cta-button" onclick="exploreButtonClick()">Start Your Journey</a>
+      </div>
+  </section>
+  
+<!-- Services Section -->
+<section class="services">
+    <div class="services-content">
+      <h2>Our Services</h2>
+      <p>Explore the wide range of innovative services Mind Merge offers to empower your business and projects.</p>
+  
+      <div class="service-item">
+        <h3>Software Development</h3>
+        <p>From ideation to execution, we specialize in creating cutting-edge software solutions tailored to your needs.</p>
+      </div>
+  
+      <div class="service-item">
+        <h3>AI & ML Integration</h3>
+        <p>Unlock the power of artificial intelligence and machine learning to transform your business processes.</p>
+      </div>
+  
+      <div class="service-item">
+        <h3>Web Development</h3>
+        <p>Crafting beautiful and functional websites that leave a lasting impression on your audience.</p>
+      </div>
+    </div>
+  </section>
+
+<section class="contact">
+  <div class="contact-content">
+    <h2>Contact Us</h2>
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
+
+  <section class="about">
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>Mind Merge is a pioneering force in the world of software, artificial intelligence, and machine learning. We merge cutting-edge technology with creative solutions to shape the future.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Mind Merge. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+</body>
+</html>
