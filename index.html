@@ -5,10 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <title>Mind Merge</title>
+   <!-- Add Glide.js library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
 </head>
 
 <body>
   <header>
+    <!-- Add a new parallax section -->
+<section class="parallax">
+  <div class="parallax-content">
+    <h2>Experience the Magic of Mind Merge</h2>
+    <p>Discover the endless possibilities with our innovative solutions.</p>
+  </div>
+</section>
+    
     <nav>
       <div class="logo">Mind Merge</div>
       <ul class="nav-links">
@@ -21,8 +31,13 @@
     </nav>
   </header>
 
+<div class="light-beam"></div>
+<div class="moving-light"></div>
+<div class="magical-element"> Content</div>
 
-  <section class="hero">
+  
+
+  <section class="hero neon-glow">
     <div class="hero-content">
       <h1>Welcome to Mind Merge</h1>
       <p>Your Gateway to Innovation in Software, AI, and ML</p>
@@ -67,6 +82,21 @@
     </div>
   </section>
 
+<section class="carousel">
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <!-- Add your carousel slides here -->
+        <li class="glide__slide"><img src="https://media.harrypotterfanzone.com/harry-ron-and-lupin-at-grimmauld-place-600x0-c-default.jpg" alt="Slide 1"></li>
+        
+        <li class="glide__slide"><img src="https://media.harrypotterfanzone.com/harry-in-a-corridor-600x0-c-default.jpg" alt="Slide 2"></li>
+        <li class="glide__slide"><img src="https://media.harrypotterfanzone.com/teachers-in-the-trophy-room-1050x0-c-default.jpg" alt="Slide 3"></li>
+      </ul>
+    </div>
+  </div>
+</section>
+  
+
 <section class="contact">
   <div class="contact-content">
     <h2>Contact Us</h2>
@@ -85,17 +115,19 @@
   </div>
 </section>
 
-  <section class="about">
+  <section class="about overlapping-elements">
     <div class="about-content">
       <h2>About Us</h2>
       <p>Mind Merge is a pioneering force in the world of software, artificial intelligence, and machine learning. We merge cutting-edge technology with creative solutions to shape the future.</p>
     </div>
   </section>
 
+  
   <footer>
     <p>&copy; 2024 Mind Merge. All rights reserved.</p>
   </footer>
-
+  
+ <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
