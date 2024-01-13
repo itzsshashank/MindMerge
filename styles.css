@@ -271,3 +271,178 @@ body {
     }
   }
   
+
+/* Add these styles to your existing CSS file or update your styles accordingly */
+
+/* Mobile Navigation Styles */
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Hero Section Styles */
+.hero-content {
+  text-align: center;
+}
+
+/* Contact Section Styles */
+.contact-content {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #f9f9f9;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px;
+  }
+
+  .dark-mode-toggle {
+    order: -1;
+  }
+
+  .hero-content {
+    padding: 50px 20px;
+  }
+
+  .contact-content {
+    padding: 20px;
+  }
+}
+/* styles.css */
+
+/* Add this style for the scrolled header */
+header.scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional styles for the interactive header */
+nav {
+  transition: background-color 0.3s ease;
+}
+
+.nav-links {
+  transition: opacity 0.3s ease;
+}
+
+.dark-mode-toggle {
+  transition: color 0.3s ease;
+}
+
+/* Add more styles based on your preferences */
+
+/* Add styles for the parallax section */
+.parallax {
+  height: 400px; /* Adjust the height based on your preference */
+  background-image: url('https://media.harrypotterfanzone.com/harry-at-the-train-station-1050x0-c-default.jpg'); /* Add your parallax background image */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.parallax-content {
+  transform: translateY(50%);
+}
+
+.glide__slide img {
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 8px; /* Optional: Add rounded corners for a better look */
+}
+
+
+/* break */
+
+.light-beam {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+  animation: lightBeam 5s linear infinite;
+}
+
+@keyframes lightBeam {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.neon-glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+}
+.moving-light {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  animation: movingLight 3s infinite alternate;
+}
+
+@keyframes movingLight {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    left: 0;
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
+    left: 100%;
+  }
+}
+.overlapping-elements {
+  position: relative;
+  z-index: 1;
+}
+
+.overlapping-elements::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  z-index: -1;
+}
+
+
+.magical-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.magical-element.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
