@@ -65,3 +65,59 @@ function exploreButtonClick() {
     button.textContent = 'Keep Exploring!';
   }
   
+// Add this JavaScript code for mobile menu toggle
+
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
+// script.js
+
+// Function to toggle dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+
+// Function to submit the contact form
+function submitForm(event) {
+  event.preventDefault();
+
+// Add an interactive header on scroll
+document.addEventListener("scroll", function () {
+  const header = document.querySelector("header");
+
+  // Add a shadow to the header when scrolled
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+// Add parallax scrolling effect
+document.addEventListener("scroll", function () {
+  const parallaxSection = document.querySelector(".parallax");
+  const scrollPosition = window.scrollY;
+
+  // Adjust the parallax effect based on your preference
+  parallaxSection.style.backgroundPositionY = -scrollPosition * 0.5 + "px";
+});
+  
+  
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Glide.js carousel
+  new Glide('.glide', {
+    type: 'carousel',
+    autoplay: 3000, // Set autoplay duration in milliseconds (optional)
+    hoverpause: true, // Pause on hover (optional)
+  }).mount();
+});
+
+  document.addEventListener("scroll", function () {
+  var element = document.querySelector(".magical-element");
+  var position = element.getBoundingClientRect().top;
+  var screenHeight = window.innerHeight;
+
+  if (position < screenHeight * 0.75) {
+    element.classList.add("active");
+  }
+});
