@@ -121,3 +121,23 @@ document.addEventListener("DOMContentLoaded", function () {
     element.classList.add("active");
   }
 });
+
+// Toggle hamburger menu on click 
+function toggleMenu() {
+  document.getElementById("nav-links").classList.toggle("open");
+}
+
+document.addEventListener("click", e => {
+  if (!e.target.matches('.hamburger') && !e.target.matches('#nav-links li')) {
+    document.getElementById("nav-links").classList.remove("open");
+  }
+});
+
+window.onscroll = function () {
+  const nav = document.querySelector("nav");
+  if (window.pageYOffset > 100) {
+    nav.classList.add("sticky");
+  } else {
+    nav.classList.remove("sticky");
+  }
+};

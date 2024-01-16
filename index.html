@@ -1,135 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Mind Merge</title>
-   <!-- Add Glide.js library -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Add Glide.js library -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <title>Mind Merge</title>
+    <script src="'script.js"></script>
 </head>
 
 <body>
-  <header>
-    <!-- Add a new parallax section -->
-<section class="parallax">
-  <div class="parallax-content">
-    <h2>Experience the Magic of Mind Merge</h2>
-    <p>Discover the endless possibilities with our innovative solutions.</p>
-  </div>
-</section>
-    
-    <nav>
-      <div class="logo">Mind Merge</div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div class="dark-mode-toggle" onclick="toggleDarkMode()">🌙</div>
-    </nav>
-  </header>
 
-<div class="light-beam"></div>
-<div class="moving-light"></div>
-<div class="magical-element"> Content</div>
+    <header>
+        <!-- Add a new parallax section -->
+        <section class="parallax">
+            <div class="parallax-content">
+                <h2>Experience the Magic of Mind Merge</h2>
+                <p>Discover the endless possibilities with our innovative solutions.</p>
+            </div>
+        </section>
 
-  
+        <div class="logo">Mind Merge</div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="dark-mode-toggle">🌙</div>
+      </nav>
 
-  <section class="hero neon-glow">
-    <div class="hero-content">
-      <h1>Welcome to Mind Merge</h1>
-      <p>Your Gateway to Innovation in Software, AI, and ML</p>
-      <div class="example-boxes">
-        <div class="example-box">
-          <h3>Software Solutions</h3>
-          <p>Explore our cutting-edge software solutions.</p>
+    </header>
+
+    <div class="light-beam"></div>
+    <div class="moving-light"></div>
+    <div class="magical-element">Content</div>
+
+    <section class="hero neon-glow">
+        <div class="hero-content">
+            <h1>Welcome to Mind Merge</h1>
+            <p>Your Gateway to Innovation in Software, AI, and ML</p>
+            <div class="example-boxes">
+                <div class="example-box">
+                    <h3>Software Solutions</h3>
+                    <p>Explore our cutting-edge software solutions.</p>
+                </div>
+                <div class="example-box">
+                    <h3>AI Applications</h3>
+                    <p>Experience the power of artificial intelligence.</p>
+                </div>
+                <div class="example-box">
+                    <h3>Machine Learning</h3>
+                    <p>Unleash the potential of machine learning technologies.</p>
+                </div>
+            </div>
+            <a href="#" class="cta-button" onclick="exploreButtonClick()">Start Your Journey</a>
         </div>
-        <div class="example-box">
-          <h3>AI Applications</h3>
-          <p>Experience the power of artificial intelligence.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="services-content">
+            <h2>Our Services</h2>
+            <p>Explore the wide range of innovative services Mind Merge offers to empower your business and projects.</p>
+
+            <div class="service-item">
+                <h3>Software Development</h3>
+                <p>From ideation to execution, we specialize in creating cutting-edge software solutions tailored to
+                    your needs.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>AI & ML Integration</h3>
+                <p>Unlock the power of artificial intelligence and machine learning to transform your business processes.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Web Development</h3>
+                <p>Crafting beautiful and functional websites that leave a lasting impression on your audience.</p>
+            </div>
         </div>
-        <div class="example-box">
-          <h3>Machine Learning</h3>
-          <p>Unleash the potential of machine learning technologies.</p>
+    </section>
+
+    <section class="carousel">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <!-- Add your carousel slides here -->
+                    <li class="glide__slide"><img src="slide1.jpg" alt="Slide 1"></li>
+                    <li class="glide__slide"><img src="slide2.jpg" alt="Slide 2"></li>
+                    <li class="glide__slide"><img src="slide3.jpg" alt="Slide 3"></li>
+                </ul>
+            </div>
         </div>
-      </div>
-      <a href="#" class="cta-button" onclick="exploreButtonClick()">Start Your Journey</a>
-      </div>
-  </section>
-  
-<!-- Services Section -->
-<section class="services">
-    <div class="services-content">
-      <h2>Our Services</h2>
-      <p>Explore the wide range of innovative services Mind Merge offers to empower your business and projects.</p>
-  
-      <div class="service-item">
-        <h3>Software Development</h3>
-        <p>From ideation to execution, we specialize in creating cutting-edge software solutions tailored to your needs.</p>
-      </div>
-  
-      <div class="service-item">
-        <h3>AI & ML Integration</h3>
-        <p>Unlock the power of artificial intelligence and machine learning to transform your business processes.</p>
-      </div>
-  
-      <div class="service-item">
-        <h3>Web Development</h3>
-        <p>Crafting beautiful and functional websites that leave a lasting impression on your audience.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-<section class="carousel">
-  <div class="glide">
-    <div class="glide__track" data-glide-el="track">
-      <ul class="glide__slides">
-        <!-- Add your carousel slides here -->
-        <li class="glide__slide"><img src="slide1.jpg" alt="Slide 1"></li>
-        
-        <li class="glide__slide"><img src="slide2.jpg" alt="Slide 2"></li>
-        <li class="glide__slide"><img src="slide3.jpg" alt="Slide 3"></li>
-      </ul>
-    </div>
-  </div>
-</section>
-  
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <form id="contactForm" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-<section class="contact">
-  <div class="contact-content">
-    <h2>Contact Us</h2>
-    <form id="contactForm" onsubmit="submitForm(event)">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
 
-      <button type="submit">Submit</button>
-    </form>
-  </div>
-</section>
+    <section class="about overlapping-elements">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Mind Merge is a pioneering force in the world of software, artificial intelligence, and machine
+                learning. We merge cutting-edge technology with creative solutions to shape the future.</p>
+        </div>
+    </section>
 
-  <section class="about overlapping-elements">
-    <div class="about-content">
-      <h2>About Us</h2>
-      <p>Mind Merge is a pioneering force in the world of software, artificial intelligence, and machine learning. We merge cutting-edge technology with creative solutions to shape the future.</p>
-    </div>
-  </section>
+    <footer>
+        <p>&copy; 2024 Mind Merge. All rights reserved.</p>
+    </footer>
 
-  
-  <footer>
-    <p>&copy; 2024 Mind Merge. All rights reserved.</p>
-  </footer>
-  
- <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
-</body>
+
 </html>

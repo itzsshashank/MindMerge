@@ -11,11 +11,81 @@ body {
     padding: 1rem;
   }
   
+  body {
+    margin: 0;
+  }
+  
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    transition: background 0.5s, transform 0.5s;
+    background: white;
   }
+  
+  nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: translateY(0%);
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  #nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #nav-links.open {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background: white;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #nav-links.open a {
+    color: black;
+  }
+  
+  #nav-links.open li {
+    margin: 1rem 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-right: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+  }
+  
   
   .logo {
     font-size: 1.5rem;
@@ -154,16 +224,19 @@ body {
   
   .example-boxes {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin-top: 20px;
   }
   
   .example-box {
-    background-color: #f0f0f0; /* Box background color */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+    width: 300px;
+    background-color: #f0f0f0;
+    padding: 50px 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    margin: 0 20px;
+    flex: 1 1 300px;
   }
   
   .example-box h3 {
@@ -171,39 +244,24 @@ body {
     color: #555; /* Heading color */
   }
   
-  .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #0056b3; /* Hover state color */
-  }
 
 /* break */
-
 .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #3498db;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-  }
-  
-  .cta-button:hover {
-    background-color: #2980b9;
-    transform: scale(1.1);
-  }
-  
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1);
+}
+
 
 /* Services Section */
 .services-content {
@@ -227,6 +285,8 @@ body {
   .service-item p {
     color: #666;
   }
+
+
   /* Contact Section */
   .contact {
     background-color: #ececec;
@@ -238,21 +298,36 @@ body {
     margin: 0 auto;
   }
   
-  /* Responsive styles */
-  @media (max-width: 600px) {
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
     form {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  }
-  
-/* break */
+}
 
+/* Breakpoint for screens up to 768px width */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    /* ... (other responsive styles) ... */
+}
+
+  
+/* Hero Section Styles */
 
 .hero-content {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s forwards;
   }
+
+  /* Contact Section Styles */
+
   
   .contact-content {
     opacity: 0;
@@ -352,19 +427,34 @@ nav {
   transition: color 0.3s ease;
 }
 
-/* Add more styles based on your preferences */
 
 /* Add styles for the parallax section */
 .parallax {
-  height: 400px; /* Adjust the height based on your preference */
-  background-image: url('https://media.harrypotterfanzone.com/harry-at-the-train-station-1050x0-c-default.jpg'); /* Add your parallax background image */
-  background-size: cover;
-  background-position: center;
+  position: relative; 
+  height: 400px;
+  border-radius: 10px; 
+  overflow: hidden;
+  
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+}
+
+.parallax::before {
+  content: "";
+  background-image: url('https://media.harrypotterfanzone.com/harry-at-the-train-station-1050x0-c-default.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  right: 0; 
+  bottom: 0;
+  transform: scale(1.2); 
+}
+.parallax-content {
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .parallax-content {
@@ -445,4 +535,3 @@ nav {
   opacity: 1;
   transform: translateY(0);
 }
-
